@@ -6,11 +6,11 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 20:53:29 by jceia             #+#    #+#             */
-/*   Updated: 2020/11/30 20:57:28 by jceia            ###   ########.fr       */
+/*   Updated: 2020/11/30 22:07:25 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+char	*ft_strlcat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int	dest_len;
 	unsigned int	index;
