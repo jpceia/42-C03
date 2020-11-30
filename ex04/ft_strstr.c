@@ -1,20 +1,30 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/30 20:52:36 by jceia             #+#    #+#             */
+/*   Updated: 2020/11/30 20:56:49 by jceia            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	unsigned int i;
+	unsigned int	index;
 
-	while (*str != 0)
+	while (*str)
 	{
-		i = 0;
+		index = 0;
 		while (to_find != 0)
 		{
-			if (to_find[i] != str[i])
-				break;
-			i++;
+			if (to_find[index] != str[index])
+				break ;
+			index++;
 		}
-		if (to_find[i] == 0)
-			break;
+		if (to_find[index] == 0)
+			break ;
 		str++;
 	}
 	return (str);
