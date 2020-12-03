@@ -14,18 +14,20 @@ char	*ft_strstr(char *str, char *to_find)
 {
 	unsigned int	index;
 
+	if (!to_find)
+		return (str);
 	while (*str)
 	{
 		index = 0;
-		while (to_find != 0)
+		while (to_find[index] != 0)
 		{
 			if (to_find[index] != str[index])
 				break ;
 			index++;
 		}
 		if (to_find[index] == 0)
-			break ;
+			return (str) ;
 		str++;
 	}
-	return (str);
+	return (0);
 }
