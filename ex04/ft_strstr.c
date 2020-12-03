@@ -26,7 +26,7 @@ char	*ft_strstr(char *str, char *to_find)
 			index++;
 		}
 		if (to_find[index] == 0)
-			return (str) ;
+			return (str)
 		str++;
 	}
 	return (0);
