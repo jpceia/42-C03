@@ -17,17 +17,17 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int nb)
 	unsigned int	index;
 
 	src_len = 0;
-	while (src[src_len])
+	while (src[src_len] && src_len < nb)
 		src_len++;
 	dest_len = 0;
 	while (dest[dest_len])
 		dest_len++;
 	index = 0;
-	while (src[index] && (index < nb - 1))
+	while (src[index] && (dest_len + index + 1 < nb))
 	{
 		dest[dest_len + index] = src[index];
 		index++;
 	}
 	dest[dest_len + index] = '\0';
-	return (src_lne + dest_len);
+	return (dest_len + src_len);
 }
