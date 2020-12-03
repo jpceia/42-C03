@@ -17,7 +17,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int nb)
 	unsigned int	index;
 
 	src_len = 0;
-	while (src[src_len] && src_len < nb)
+	while (src[src_len])
 		src_len++;
 	dest_len = 0;
 	while (dest[dest_len])
@@ -29,5 +29,5 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int nb)
 		index++;
 	}
 	dest[dest_len + index] = '\0';
-	return (dest_len + src_len);
+	return (src_len);
 }
